@@ -1,3 +1,9 @@
+"""
+FaceAndLandmark_autoMesh_v6.py
+--------------------------------
+Purpose: Full pipeline for 3D facial landmark fusion, surgical mask sizing,
+selective feature OBJ export, and cross-video duplicate detection.
+"""
 
 import os, sys, csv, json, time, math, argparse, re
 from pathlib import Path
