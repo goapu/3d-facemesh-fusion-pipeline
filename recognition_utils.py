@@ -1,5 +1,4 @@
 
-# recognition_utils.py
 # Purpose: Face embeddings (FaceNet) & duplicate detection utilities.
 
 from typing import Optional, Dict, Tuple
