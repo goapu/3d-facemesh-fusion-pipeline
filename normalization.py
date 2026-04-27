@@ -1,5 +1,4 @@
 
-# normalization.py
 # Purpose: Provide two normalization modes for facial landmarks.
 # - Generic normalization: centroid translation + interocular scaling + eye-line rotation
 # - Mask normalization: nasion-centered + bizygomatic scaling + ear-line rotation
