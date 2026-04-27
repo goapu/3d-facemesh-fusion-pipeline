@@ -1,36 +1,4 @@
 
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-FaceAndLandmark_autoMesh_v6.py
---------------------------------
-Purpose: Full pipeline for 3D facial landmark fusion, surgical mask sizing,
-selective feature OBJ export, and cross-video duplicate detection.
-
-Requirements (Python 3.10):
-  pip install mediapipe facenet-pytorch torch torchvision opencv-python numpy pandas scikit-learn
-
-Examples
---------
-# Generic normalization (default)
-python FaceAndLandmark_autoMesh_v6.py videos \
-  --input "/path/to/videos" --out-root "/path/to/output" \
-  --pattern "*.mp4" --export-type all --verbose
-
-# Mask-specific normalization (for surgical mask sizing)
-python FaceAndLandmark_autoMesh_v6.py videos \
-  --input "/path/to/videos" --out-root "/path/to/output" \
-  --pattern "*.mp4" --export-type all --mask-normalization --verbose
-
-Outputs per person (ID extracted from filename digits):
-  XX_fused.json / XX_fused.obj / XX_fused.jpg
-  XX_ear2ear.obj / XX_ear_over_bridge.obj / XX_bizygomatic.obj
-  XX_menton_sellion.obj / XX_nosebridge.obj / XX_lip2chin.obj
-  XX_summary.csv / XX_embedding.npy
-Global files:
-  summary.csv / embeddings.npy / duplicate_report.csv
-"""
-
 import os, sys, csv, json, time, math, argparse, re
 from pathlib import Path
 from typing import List, Dict, Optional, Tuple
